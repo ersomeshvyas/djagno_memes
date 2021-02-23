@@ -13,9 +13,26 @@
       </div>
     </div>
     <div class="memes">
-      {% extends 'images.html' %}
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-8 col-lg-5">
+            <h6 class="text-muted">Memes</h6> 
+            <ul class="list-group">
+            {% for x in memes.data.memes %}
+              {% if forloop.counter <= 5 %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  {{ x.name }}
+                  <div class="image-parent">
+                      <img src="{{ x.url}}" class="img-fluid" alt="quixote">
+                  </div>
+                </li>
+              {% endif %}
+            {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-  {% endif %}    
   {% else %}
     <p>You are not logged in</p>
     <a href="{% url 'login' %}">Log In</a>
