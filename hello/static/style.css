@@ -39,7 +39,7 @@ p{
   font-family:sans-serif;
 }
 
-a.close,
+/*a.close,
 a.submit{
   margin-top:0;
   display:inline-block;
@@ -54,7 +54,7 @@ a.submit{
   &:last-of-type{
     margin-right:0;
   }
-}
+}*/
 
 .image-parent {
   max-width: 40px;
