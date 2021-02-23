@@ -6,9 +6,11 @@
   <title>{% block title %}Django Meme Tutorial{% endblock %}</title>
   {% load static %}
   <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
 </head>
 <body>
   <script src="{% static 'js/jquery.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
   <script src="{% static 'common.js?rand=23423423' %}"></script>
   {% block content %}
   {% endblock %}
