@@ -5,12 +5,12 @@
       <ul class="list-group">
       {% for x in memes.data.memes %}
         {% if forloop.counter <= 5 %}
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          x.name 
-          <div class="image-parent">
-              <img src="{{ x.url}}" class="img-fluid" alt="quixote">
-          </div>
-        </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            x.name 
+            <div class="image-parent">
+                <img src="{{ x.url}}" class="img-fluid" alt="quixote">
+            </div>
+          </li>
         {% endif %}
       {% endfor %}
       </ul>
