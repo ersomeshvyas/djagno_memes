@@ -6,7 +6,7 @@
 {% block content %}
 {% if user.is_authenticated %}
   Hi {{ user.username }}!
-  {% for x in memes.data.memes %}
+  {% for x in memes %}
     <img src="{{ x.url }}" alt="img">
   {% endfor %}
   <p><a href="{% url 'logout' %}">Log Out</a></p>
