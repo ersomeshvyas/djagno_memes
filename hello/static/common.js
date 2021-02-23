@@ -12,6 +12,7 @@ jQuery(document).ready(function($) {
   });
   
   $('a.submit').click(function(){
+    $('.popup-overlay').fadeOut();
     $('.memes').css('display', 'block');
   });
 
