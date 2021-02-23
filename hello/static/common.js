@@ -7,7 +7,7 @@ jQuery(document).ready(function($) {
     }
   }
   
-  $('a.close').click(function(){
+  $('a.disagree').click(function(){
     window.location.href = "accounts/logout";
   });
   
