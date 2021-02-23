@@ -8,7 +8,7 @@ def index(request):
     # return HttpResponse('Hello from Python!')
     response = requests.get('https://api.imgflip.com/get_memes')
     memes = response.json()
-    return render(request, "index.html", {'memes': memes})
+    return render(request, "index.html", {'memes': memes[:5]})
 
 
 def db(request):
