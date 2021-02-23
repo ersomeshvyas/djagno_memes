@@ -1,24 +1,18 @@
 <div class="container">
   <div class="row">
     <div class="col-12 col-sm-8 col-lg-5">
-      <h6 class="text-muted">List Group with Images</h6> 
+      <h6 class="text-muted">Memes</h6> 
       <ul class="list-group">
+      {% for x in memes.data.memes %}
+        {% if forloop.counter <= 5 %}
         <li class="list-group-item d-flex justify-content-between align-items-center">
-          Don Quixote 
+          x.name 
           <div class="image-parent">
-              <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/don_quixote.jpg" class="img-fluid" alt="quixote">
+              <img src="{{ x.url}}" class="img-fluid" alt="quixote">
           </div>
         </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          As I Lay Dying 
-          <div class="image-parent">
-              <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/as_I_lay.jpg" class="img-fluid" alt="lay">
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center">  
-          Things Fall Apart
-          <div class="image-parent">
-              <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/things_fall_apart.jpg" class="img-fluid" alt="things">
-        </li>
+        {% endif %}
+      {% endfor %}
       </ul>
     </div>
   </div>

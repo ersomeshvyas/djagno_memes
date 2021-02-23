@@ -56,3 +56,7 @@ a.submit{
     margin-right:0;
   }
 }
+
+.image-parent {
+  max-width: 40px;
+}
