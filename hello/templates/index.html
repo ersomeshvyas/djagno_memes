@@ -15,6 +15,7 @@
   <div class="memes">
     {% for x in memes.data.memes %}
       {% if forloop.counter <= 5 %}
+        {% extends images.html %}
         <img src="{{ x.url }}" alt="img">
       {% endif %}
     {% endfor %}
