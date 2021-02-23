@@ -6,9 +6,13 @@
 {% block content %}
 {% if user.is_authenticated %}
   Hi {{ user.username }}!
-  {% for x in memes.data.memes[:5] %}
-    <img src="{{ x.url }}" alt="img">
-  {% endfor %}
+  {% with counter=0 %}
+    {% for x in memes.data.memes %}
+      {% if forloop.counter <= 5 %}
+        <img src="{{ x.url }}" alt="img">
+      {% endif %}
+    {% endfor %}
+  {% endwith %}
   <p><a href="{% url 'logout' %}">Log Out</a></p>
 {% else %}
   <p>You are not logged in</p>
