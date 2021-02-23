@@ -1,4 +1,4 @@
-jQuery(document).ready(function($) {
+$(document).ready(function() {
   
   //check to see if the submited cookie is set, if not check if the popup has been closed, if not then display the popup
   if( getCookie('popupCookie') != 'submited'){ 
