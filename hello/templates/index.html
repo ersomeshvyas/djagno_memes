@@ -4,19 +4,19 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-{% if user.is_authenticated %}
-  <div class="popup-overlay">
-    <div class="popup">
-      <p>Please agree to continue</p>
-      <a href="javascript:;" class="close">Close</a>
-      <a href="javascript:;" class="submit">Agree</a>
+  {% if user.is_authenticated %}
+    <div class="popup-overlay">
+      <div class="popup">
+        <p>Please agree to continue</p>
+        <a href="javascript:;" class="close">Close</a>
+        <a href="javascript:;" class="submit">Agree</a>
+      </div>
     </div>
-  </div>
-  <div class="memes">
-    {% extends 'images.html' %}
-  </div>
-{% else %}
-  <p>You are not logged in</p>
-  <a href="{% url 'login' %}">Log In</a>
-{% endif %}
+    <div class="memes">
+      {% extends 'images.html' %}
+    </div>
+  {% else %}
+    <p>You are not logged in</p>
+    <a href="{% url 'login' %}">Log In</a>
+  {% endif %}
 {% endblock %}
