@@ -7,4 +7,4 @@ class Greeting(models.Model):
 
 class Cookie(models.Model):
     user = models.CharField(max_length=200)
-    consent = models.BooleanField(default=false)
+    consent = models.BooleanField(default=False)
